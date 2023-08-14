@@ -32,9 +32,7 @@ class _MyAppState extends State<MyApp> {
           appBar: AppBar(
             actions: [
               const SizedBox(width: 10),
-              Icon(_themeToggle
-                  ? CupertinoIcons.moon_stars
-                  : CupertinoIcons.sun_max_fill),
+              Icon(_themeToggle ? CupertinoIcons.moon_stars : CupertinoIcons.sun_max_fill),
               /** Toggle Switch for dark mode */
               const SizedBox(width: 4),
               Switch(
@@ -107,9 +105,7 @@ class _MyAppState extends State<MyApp> {
                                 onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const ModeScreen()),
+                                    MaterialPageRoute(builder: (context) => const ModeScreen()),
                                   );
                                 },
                                 child: Row(
@@ -139,9 +135,7 @@ class _MyAppState extends State<MyApp> {
               Tab(child: Icon(CupertinoIcons.camera_fill)),
               Tab(child: Text("Chats", style: TextStyle(fontSize: 15))),
               Tab(child: Text('Status', style: TextStyle(fontSize: 15))),
-              Tab(
-                  iconMargin: EdgeInsets.zero,
-                  child: Text('Calls', style: TextStyle(fontSize: 15)))
+              Tab(iconMargin: EdgeInsets.zero, child: Text('Calls', style: TextStyle(fontSize: 15)))
             ]),
           ),
           /** Views for Tabs **/
@@ -202,14 +196,11 @@ class _MyAppState extends State<MyApp> {
                           ListTile(
                             leading: Container(
                               decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border:
-                                      Border.all(width: 3, color: Colors.grey)),
+                                  shape: BoxShape.circle, border: Border.all(width: 3, color: Colors.grey)),
                               child: const Padding(
                                 padding: EdgeInsets.all(1),
                                 child: CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('assets/mypic.jpg'),
+                                  backgroundImage: AssetImage('assets/mypic.jpg'),
                                   radius: 30,
                                 ),
                               ),
@@ -220,8 +211,7 @@ class _MyAppState extends State<MyApp> {
                             ),
                           ),
                           const Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 25),
+                            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
                             child: Text(
                               'Recent Updates',
                               style: TextStyle(fontSize: 17),
@@ -232,19 +222,16 @@ class _MyAppState extends State<MyApp> {
                           ListTile(
                             leading: Container(
                               decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                      width: 2.5, color: Colors.green)),
+                                  shape: BoxShape.circle, border: Border.all(width: 2.5, color: Colors.green)),
                               child: const Padding(
                                 padding: EdgeInsets.all(1.0),
                                 child: CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('assets/kaleem.jpg'),
+                                  backgroundImage: AssetImage('assets/mypic.jpg'),
                                   radius: 30,
                                 ),
                               ),
                             ),
-                            title: const Text('Kaleem Uni'),
+                            title: const Text('Someone'),
                             subtitle: Row(
                               children: const [Text('Yesterday, 06:56 PM')],
                             ),
@@ -257,19 +244,16 @@ class _MyAppState extends State<MyApp> {
                           ListTile(
                             leading: Container(
                               decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                      width: 2.5, color: Colors.green)),
+                                  shape: BoxShape.circle, border: Border.all(width: 2.5, color: Colors.green)),
                               child: const Padding(
                                 padding: EdgeInsets.all(1.0),
                                 child: CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('assets/kaleem.jpg'),
+                                  backgroundImage: AssetImage('assets/Someone.jpg'),
                                   radius: 30,
                                 ),
                               ),
                             ),
-                            title: const Text('Kaleem Uni'),
+                            title: const Text('Someone'),
                             subtitle: Row(
                               children: const [Text('Yesterday, 06:56 PM')],
                             ),
@@ -294,25 +278,21 @@ class _MyAppState extends State<MyApp> {
                       itemCount: 10,
                       itemBuilder: (context, index) => ListTile(
                             leading: const CircleAvatar(
-                              backgroundImage: AssetImage('assets/kaleem.jpg'),
+                              backgroundImage: AssetImage('assets/Someone.jpg'),
                               radius: 20,
                             ),
-                            title: const Text('Kaleem Uni'),
+                            title: const Text('Someone '),
                             subtitle: Row(
                               children: [
                                 Icon(
                                   Icons.call_received_outlined,
-                                  color: index % 2 == 1
-                                      ? Colors.green
-                                      : Colors.red,
+                                  color: index % 2 == 1 ? Colors.green : Colors.red,
                                   size: 20,
                                 ),
                                 const Text('Yesterday 12:03 AM')
                               ],
                             ),
-                            trailing: Icon(index % 2 == 1
-                                ? Icons.call
-                                : Icons.videocam_rounded),
+                            trailing: Icon(index % 2 == 1 ? Icons.call : Icons.videocam_rounded),
                           )),
                 ),
                 floatingActionButton: FloatingActionButton(
